@@ -6,8 +6,9 @@
 }
 
 body {
-    background-image: url("./assets/image/1600x900-HD-Wallpaper-Free-Download-620x349.jpg");
+    background-image: url("./assets/photo-1549558549-415fe4c37b60.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
+    min-height: 100vh;
 }
