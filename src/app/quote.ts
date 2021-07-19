@@ -1,6 +1,6 @@
 export class Quote {
     likes: any;
-    dislikes: any;
+    unlikes: any;
 	  constructor(public name:string,public author:string, public description:string){
         
     }

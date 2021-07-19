@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit ,Output,EventEmitter} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 // import { Quote } from '../quote';
 
 @Component({
@@ -23,10 +23,10 @@ export class QuoteDetailComponent implements OnInit {
   //   this.quote.likes = like;
   // }
 
-  // incrementDislikes(){
-  //   let dislike = this.quote.dislikes;
+  // incrementunlikes(){
+  //   let unlike = this.quote.unlikes;
   //   dislike++;
-  //   this.quote.dislikes = dislike;
+  //   this.quote.unlikes = unlike;
   // }
 
   constructor() { }
