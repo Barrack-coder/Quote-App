@@ -1,59 +1,70 @@
-<div class="container text-center">
-    <h3 class="" style="color:#18FFFF;">WELCOME TO QUOTE APP</h3>
-</div>
-<div class="container">
-    <!-- <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> -->
-    <div class="row">
-        <div *ngFor='let quote of quotes;let i = index' class="col-md-4 mb-4">
-            <div class="card text-white bg-dark h-100">
-                <div class="card-header">
-                    Quote
+<div class="container-fluid">
+    <div class=".flex-md-fill">
+        <div class="">
+            <!-- <div> -->
+            <div class="container text-center">
+                <h3 class="" style="color:#18FFFF;font-style: font-family 'Monoton', cursive;;font-size: 40px;">WELCOME TO QUOTE APP</h3>
+                <button class="btn btn-secondary" (click)="toggleReadMore()">Create quote</button>
+            </div>
+            <div class="container">
+                <!-- <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> -->
+                <div class="row">
+                    <div *ngFor='let quote of quotes;let i = index' class="col-md-4 mb-4">
+                        <div class="card text-white bg-dark h-100">
+                            <div class="card-header">
+                                Quote
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>{{quote.description}}</p>
+                                    <footer class="blockquote-footer mt-3"><cite title="Source Title">{{quote.author}} </cite></footer>
+                                </blockquote>
+                                <app-quote-detail></app-quote-detail>
+                            </div>
+                            <div class="card-footer">
+                                <!-- <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>{{quote.description}}</p>
-                        <footer class="blockquote-footer mt-3"><cite title="Source Title">{{quote.author}} </cite></footer>
-                    </blockquote>
+            </div>
+            <!-- </div> -->
+            <div class="">
+                <!-- <div> -->
+                <div class="container text-center mt-2">
+                    <p class="" style="color: #18FFFF;font-size: 30px;">Generate as many quotes as you wish.</p>
+                    <h4 class="mt-5" style="color: #18FFFF;font-style: font-family 'Shadows Into Light Two', cursive;;">CREATE A NEW QUOTE</h4>
                 </div>
-                <div class="card-footer">
-                    <!-- <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail> -->
+                <div class="container mt-3 mb-5 frm d-flex justify-content-end">
+                    <form class="w-50 mt-5 mb-5">
+                        <div class="form-group">
+                            <label for="description">Quote:</label>
+                            <textarea class="form-control" id="description" rows="4" ngModeln required></textarea>
+                            <!-- <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                                <p>A Quote is required</p>
+                                </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" ngModel name="author" class="form-control" required>
+                            <!-- <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                                 <p>Author is required</p>
+                                 </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Submitted By:</label>
+                            <input type="text" id="name" ngModel name="name" class="form-control" required>
+                            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                                <p>Name is required</p>
+                                 </div> -->
+                        </div>
+                        <button type="submit" class="btn mt-4">Add Quote</button>
+                    </form>
                 </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="container text-center mt-2">
-    <p class="" style="color: #84FFFF;">Generate as many quotes as you wish.</p>
-    <h4 class="mt-5" style="color: #18FFFF;">CREATE A NEW QUOTE</h4>
-</div>
-<div class="container mt-3 mb-5 frm">
-    <form class="w-50 mt-5 mb-5">
-        <div class="form-group">
-            <label for="description">Quote:</label>
-            <textarea class="form-control" id="description" rows="4" ngModeln required></textarea>
-            <!-- <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                <p>A Quote is required</p>
-            </div> -->
-        </div>
-        <div class="form-group">
-            <label for="author">Author:</label>
-            <input type="text" id="author" ngModel name="author" class="form-control" required>
-            <!-- <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                <p>Author is required</p>
-            </div> -->
-        </div>
-        <div class="form-group">
-            <label for="name">Submitted By:</label>
-            <input type="text" id="name" ngModel name="name" class="form-control" required>
-            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                <p>Name is required</p>
-            </div> -->
-        </div>
-        <button type="submit" class="btn mt-4">Add Quote</button>
-    </form>
-</div>
 
 
 
@@ -65,4 +76,16 @@
 
 
 
-<!-- <app-quote-detail></app-quote-detail> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <app-quote-detail></app-quote-detail> -->

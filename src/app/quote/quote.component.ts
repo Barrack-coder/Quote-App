@@ -13,10 +13,11 @@ export class QuoteComponent implements OnInit {
     new Quote("Barry","James Baldwin","All art a kind of confession"),
     new Quote("Barry","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams"),
   ];
+   readMore: boolean=false;
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-  
+   
     this.quotes.push(quote);
   }
 
@@ -29,7 +30,10 @@ export class QuoteComponent implements OnInit {
     }
 
   }
-
+ 
+toggleReadMore(){
+  this.readMore=!this.readMore
+  };
   constructor() { }
 
   ngOnInit(): void {
