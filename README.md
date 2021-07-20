@@ -1,4 +1,68 @@
 # QuoteApp
+This an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+
+​
+## Built With
+​
+- HTML
+- CSS
+- Bootstrap
+- Typescript
+- Javascript
+- Angular CLI version 12.1.2
+ 
+​
+## Live Demo
+​[Live Demo Link]()
+​
+​
+## Getting Started
+​
+To get a local copy, follow these simple example steps.
+​
+### Prerequisites
+​
+A computer with a working and up to date web browser.
+​
+### Setup
+​
+- Clone the repository to your folder of choice using Git (or just download all the files)
+```
+$ git clone 
+​
+```
+- Open the index.html file (in the root folder) and the website should show up.
+​
+## Author
+​
+👤 **Author**
+​
+  By Barrack Odhiambo Juma
+​
+- GitHub: [Barrack-coder](https://github.com/Barrack-coder)
+- twitter: [@BarryLemayian](https://twitter.com/home?lang=en)
+- email: barrack.jum@student.moringaschool.com
+​
+​
+## �� Contributing
+​
+Contributions, issues, and feature requests are welcome!
+​
+Feel free to check the [issues page](ISSUE_TEMPLATE/feature_request.md).
+​
+## Show your support
+​
+Give a ⭐️ if you like this project!
+​
+## Acknowledgments
+​
+- Appreciation to  Moringa school for giving me this opportunity to learn and to be creative.  :)
+​
+
+
+## contacts
+
+- email: jumabarrack17@gmail.com
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
@@ -25,3 +89,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## �� License
+​
+This project is [MIT](LICENSE) licensed.
