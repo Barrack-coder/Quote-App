@@ -8,12 +8,15 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote("Barry","Agatha Christie","People should be intrested in books,not theit author."),
-    new Quote("Barry","Paulo coelho","You are what you believe."),
-    new Quote("Barry","James Baldwin","All art a kind of confession"),
-    new Quote("Barry","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams"),
+    new Quote("Barry","Agatha Christie","People should be intrested in books,not theit author.",new Date(2020,1,5)),
+    new Quote("Barry","Paulo coelho","You are what you believe.",new Date(2019,2,3)),
+    new Quote("Barry","James Baldwin","All art a kind of confession",new Date(2019,2,3)),
+    new Quote("Barry","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams",new Date(2019,2,3)),
   ];
-   readMore: boolean=false;
+ bringForm:Boolean =false;
+   
+  quote: any;
+  bringMore: any;
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
@@ -30,10 +33,10 @@ export class QuoteComponent implements OnInit {
     }
 
   }
- 
-toggleReadMore(){
-  this.readMore=!this.readMore
-  };
+ toggleReadMore(){
+this.bringForm = !this.bringForm
+ };
+
   constructor() { }
 
   ngOnInit(): void {
