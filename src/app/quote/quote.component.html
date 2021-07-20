@@ -4,9 +4,9 @@
             <!-- <div> -->
             <div class="container text-center">
                 <h3 class="" style="color:#18FFFF;font-style: font-family 'Monoton', cursive;;font-size: 40px;">WELCOME TO QUOTE APP</h3>
-                <button class="btn btn-secondary" (click)="toggleReadMore()">Create a Quote</button>
+                <button class="btn btn-secondary" (onclick)="toggleReadMore()">Create a Quote</button>
             </div>
-            <div class="container mt-n1" style=" margin-top: -0.25rem !important;">
+            <div class="container">
                 <!-- <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> -->
                 <div class="row">
                     <div *ngFor='let quote of quotes;let i = index' class="col-md-4 mb-4">
