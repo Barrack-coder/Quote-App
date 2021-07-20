@@ -16,11 +16,11 @@
                     <p class="frm d-flex justify-content-center" style="color: #18FFFF;font-size: 30px;">Generate as many quotes as you wish.</p>
                     <h4 class="mt-5 frm d-flex justify-content-center" style="color: #18FFFF;font-style: font-family 'Shadows Into Light Two', cursive;;">CREATE A NEW QUOTE</h4>
                 </div>
-                <div class="container mt-3 mb-5 frm d-flex justify-content" style="width:60vw;" animation="" *ngIf="bringForm">
+                <div class="container mt-3 mb-5 frm d-flex justify-content" style="width:60vw;" animation="tada" *ngIf="bringForm">
                     <form class="w-50 mt-5 mb-5">
                         <div class="form-group m-2">
                             <!-- <label for="description">Quote:</label> -->
-                            <textarea class="form-control" id="description" rows="4" placeholder="Quote" ngModeln required></textarea>
+                            <textarea class="form-control" id="description" rows="4" placeholder="Quote" ngModel required></textarea>
                             <!-- <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
                                 <p>A Quote is required</p>
                                 </div> -->

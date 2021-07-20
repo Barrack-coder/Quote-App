@@ -33,6 +33,7 @@ export class QuoteComponent implements OnInit {
     }
 
   }
+  
  toggleReadMore(){
 this.bringForm = !this.bringForm
  };
