@@ -10,8 +10,8 @@ This an application where users can create quotes and have those quotes voted on
 - Typescript
 - Javascript
 - Angular CLI version 12.1.2
- 
-​
+
+
 ## Live Demo
 ​[Live Demo Link]()
 ​
