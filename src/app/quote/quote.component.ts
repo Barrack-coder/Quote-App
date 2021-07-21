@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Quote } from '../quote';
 
 @Component({
@@ -7,33 +8,55 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes:Quote[]=[
-    new Quote("Barry","Agatha Christie","People should be intrested in books,not theit author.",new Date(2020,1,5)),
-    new Quote("Barry","Paulo coelho","You are what you believe.",new Date(2019,2,3)),
-    new Quote("Barry","James Baldwin","All art a kind of confession",new Date(2019,2,3)),
-    new Quote("Barry","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams",new Date(2019,2,3)),
-  ];
+  
  bringForm:Boolean =false;
    
   quote: any;
   bringMore: any;
+  bless: any;
   addNewQuote(quote:any){
-    let quoteLength = this.quotes.length;
+    let quoteLength = this.quote.length;
     quote.id = quoteLength+1;
    
-    this.quotes.push(quote);
+    this.quote.push(quote);
   }
 
   deleteQuote(isComplete:any,index:any){
     if(isComplete){
-      let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
+      let toDelete = confirm(`Are you sure you want to delete this quote ${this.quote[index].author}?`)
       if(toDelete){
-        this.quotes.splice(index,1);
+        this.quote.splice(index,1);
       }
     }
 
   }
+
+
+  @Output() Lemi= new EventEmitter();
+  showForm: boolean=false;
   
+  // submit(me:any, ga:NgForm){
+  //   if(me.name=="" || me.title=="" || me.quote==""){
+  //     alert("fill the form to proceed")
+  //   }else{
+  //     this.Lemi.emit(me);
+  //     ga.reset()
+  //     this.showForm=false;
+  //   }
+  // };
+  
+  submit(me:any, ga:NgForm){
+    if(me.quote=="" || me.date=="" || me.author=="" || me.submittedby==""){
+      alert("fill the form to proceed ASAP")
+    }else{
+      this.Lemi.emit(me);
+      ga.reset()
+    }
+  };
+
+
+
+
  toggleReadMore(){
 this.bringForm = !this.bringForm
  };

@@ -14,10 +14,10 @@
                 <!-- <div> -->
                 <div class="container text-center mt-2">
                     <p class="frm d-flex justify-content-center" style="color: #18FFFF;font-size: 30px;">Generate as many quotes as you wish.</p>
-                    <h4 class="mt-5 frm d-flex justify-content-center" style="color: #18FFFF;font-style: font-family 'Shadows Into Light Two', cursive;;">CREATE A NEW QUOTE</h4>
+                    <h4 class="mt-5 frm d-flex justify-content-center" style="color: #12f3e0;font-style: font-family 'Shadows Into Light Two', cursive;;">CREATE A NEW QUOTE</h4>
                 </div>
                 <div class="container mt-3 mb-5 frm d-flex justify-content" style="width:60vw;" animation="tada" *ngIf="bringForm">
-                    <form class="w-50 mt-5 mb-5">
+                    <form #form="ngForm" (ngSubmit)="submit(form.value, form)" class="w-50 mt-5 mb-5">
                         <div class="form-group m-2">
                             <!-- <label for="description">Quote:</label> -->
                             <textarea class="form-control" id="description" rows="4" placeholder="Quote" ngModel required></textarea>
@@ -46,32 +46,15 @@
                 </div>
                 <!-- </div> -->
             </div>
-            <div class="container">
-                <!-- <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> -->
-                <div class="row">
-                    <div *ngFor='let quote of quotes;let i = index' class="col-md-4 mb-4">
-                        <div class="card text-white bg-dark h-100">
-                            <div class="card-header">
-                                Quote
-                            </div>
-                            <div class="card-body">
-                                <blockquote class="blockquote mb-0">
-                                    <p>{{quote.description}}</p>
-                                    <footer class="blockquote-footer mt-3"><cite title="Source Title">{{quote.author}} </cite></footer>
-                                </blockquote>
-                                <app-quote-detail></app-quote-detail>
-                            </div>
-                            <div class="card-footer">
-                                <!-- <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <!-- </div> -->
 
         </div>
     </div>
+
+    <!-- <app-cards></app-cards> -->
+
+
 
 
 
