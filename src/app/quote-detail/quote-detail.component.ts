@@ -9,7 +9,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class QuoteDetailComponent implements OnInit {
 
+  Barry:number =0;
+  hero(){
+    this.Barry ++
+
+  }
   
+  ton:number=0;
+  queen(){
+    this.ton ++
+  }
+
   // @Input() quote!:Quote;
   // @Output() isComplete = new EventEmitter<boolean>();
 
